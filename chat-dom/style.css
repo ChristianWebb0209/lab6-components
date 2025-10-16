@@ -1,0 +1,106 @@
+/* set defaults */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #696BCD;
+
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.main-container {
+    border-radius: 8px;
+    width: 100%;
+    max-width: 40rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    text-align: center;
+    background-color: #6699ff;
+    color: white;
+    padding: 20px;
+}
+
+.chat-header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+.chat-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: scroll;
+    background-color: white;
+}
+
+/* maybe a way to have better DRY here but didn't want to overcomplicate */
+.bot-message {
+    display: flex;
+    align-items: flex-start;
+    row-gap: 10px;
+    margin-bottom: 15px;
+}
+
+.user-message {
+    display: flex;
+    align-items: flex-start;
+    row-gap: 10px;
+    margin-bottom: 15px;
+
+    justify-content: flex-end;
+}
+
+.bot-message .message-text {
+    padding: 12px 16px;
+    border-radius: 18px;
+    max-width: 70%;
+
+    background-color: #f0f0f0;
+    color: #3f3f3f;
+}
+
+.user-message .message-text {
+    padding: 12px 16px;
+    border-radius: 18px;
+    max-width: 70%;
+
+    background-color: #6699ff;
+    color: white;
+}
+
+.chat-area {
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+    background-color: white;
+    border-top: 1px solid #e2e2e2;
+}
+
+.message-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #e2e2e2;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+.send-button {
+    padding: 12px 16px;
+    color: 3f3f3f;
+    background-color: #c0c0c0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
