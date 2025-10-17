@@ -1,2 +1,11 @@
 # lab6-components
 Lab on introduction to working with components
+
+
+The first approach was a good exercise to layout the styling and parts of the markup, but had no use beyond that.
+
+The DOM approach was the simplest way to add the functionality of the chat bot without too much effort. It used just plain javascript and didn't use reusable components, so I would say it is the best approach for a smaller project, or a project where this chat interface only occurs in one place. The structure of the code was fairly straightforward, and much of the functionality ended up being used later in the next two approaches. The debugging and maintenance are fairly easy, but it would get harder in a bigger project because keeping all of the logic in one script file instead of abstracting out to separate components might lead to large individual files.
+
+The PE approach for me made the most logical sense because it brings the logic for the component into its own class. The connected callback function was new to me, definitely an essential function for web dev. I would use this approach when building a bigger project that doesn't have any security risks (light DOM). Maintenance and debugging are not too difficult because everything is well organized into separate classes, the only point of friction I think is the logic and naming conventions connecting the component to the HTML.
+
+The GD approach is organized totally differently than the other three. The CSS and much of the HTML are right there in a string just inserted directly. This to me is fairly difficult to work with, and I wouldn't want to have much more code than we have here, especially since CSS files can balloon up to gigantic sizes. I would only use this approach if there were security risks involved with the project. The maintenance and debugging are harder here than in the other approaches because looking through code thats just in a string takes away intellisense and makes it less readable. The logic, on the other hand, is the same (almost) as in the PE approach, so on that front it is the same.
