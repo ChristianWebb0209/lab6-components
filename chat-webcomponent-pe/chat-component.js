@@ -21,6 +21,15 @@ class SimpleChat extends HTMLElement {
                 this.addMessage(getBotResponse(message), 'bot');
             }
         });
+
+
+        // pressing enter is the same as clicking submit
+        this.messageInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                this.sendButton.click();
+            }
+        });
     }
 
     addMessage(message, user) {

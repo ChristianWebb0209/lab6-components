@@ -4,9 +4,17 @@ document.addEventListener("DOMContentLoaded", __init);
 
 
 function __init() {
+    let sendButton = document.getElementById("send-button");
     // add event listener for input button
-    document.getElementById("send-button").addEventListener("click", sendMessage);
+    sendButton.addEventListener("click", sendMessage);
 
+    // pressing enter is the same as clicking submit
+    document.getElementById("message-input").addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            sendButton.click();
+        }
+    });
 }
 
 function addMessage(message, user) {
