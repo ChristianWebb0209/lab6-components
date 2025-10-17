@@ -1,12 +1,37 @@
+import { getBotResponse } from "../eliza.js";
+
+document.addEventListener("DOMContentLoaded", __init);
 
 
-function addMessage(message, user){
+function __init() {
+    // add event listener for input button
+    document.getElementById("send-button").addEventListener("click", sendMessage);
+
+}
+
+function addMessage(message, user) {
+
     // get from DOM section of messages
-    
-    // createElement and append
-    
-    // scroll to bottom
+    let section = document.getElementById("chat-container");
 
+    // create message container
+    let messageContainer = document.createElement("div");
+    messageContainer.className = user == "user" ? "user-message" : "bot-message";
+
+    // create the text itself
+    let messageText = document.createElement("div");
+    messageText.className = "message-text";
+    messageText.textContent = message;
+    messageContainer.appendChild(messageText);
+
+    // add on to bottom of section
+    section.appendChild(messageContainer);
+
+    // scroll to bottom
+    section.scrollTo({
+        top: section.scrollHeight,
+        behavior: "smooth"
+    });
 }
 
 function sendMessage() {
@@ -20,17 +45,10 @@ function sendMessage() {
     sendBotResponse(message);
 }
 
-function sendBotResponse(message){
-    addMessage(getElizaResopnse(message), "bot");
+function sendBotResponse(message) {
+    addMessage(getElizaResponse(message), "bot");
 }
 
-
-function __init() {
-    // add event listener for input button
-    document.getElementById("send-button").addEventListener(onclick, sendMessage)
-
-}
-
-function getElizaResopnse (message) {
-
+function getElizaResponse(message) {
+    return getBotResponse(message);
 }
