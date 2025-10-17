@@ -61,9 +61,5 @@ function sendMessage() {
 }
 
 function sendBotResponse(message) {
-    addMessage(getElizaResponse(message), "bot");
-}
-
-function getElizaResponse(message) {
-    return getBotResponse(message);
+    addMessage(getBotResponse(message), "bot");
 }
