@@ -1,3 +1,11 @@
+/* this needs to be set to flex so it will work the same way as the main component with  column scrolling */
+simple-chat {
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+    overflow: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
