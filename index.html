@@ -5,18 +5,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lab 6 - Component Approaches</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <main>
-    <h1>Chat Component</h1>
+    <h1>Chat Component Approaches</h1>
     <nav>
       <ul>
-        <li><a href="chat-prototype-html-css/">Pure HTML/CSS Prototype</a></li>
-        <li><a href="chat-dom/">Approach 1: DOM Manipulation</a></li>
-        <li><a href="chat-webcomponent-pe/">Approach 2: Progressive Enhancement Web Component</a></li>
-        <li><a href="chat-webcomponent-gd/">Approach 4: Graceful Degradation Web Component</a></li>
+        <li>
+          <a href="chat-prototype-html-css/">
+            <h3>Pure HTML and CSS Approach</h3>
+            <p>Markup with hardcoded messages. You can scroll and submit with the button, but no logic in place.</p>
+          </a>
+        </li>
+        <li>
+          <a href="chat-dom/">
+            <h3>DOM Manipulation Approach</h3>
+            <p>Plain JavaScript to manipulate DOM and add the functionality. All bot logic gotten from eliza.js.</p>
+          </a>
+        </li>
+        <li>
+          <a href="chat-webcomponent-pe/">
+            <h3>Progressive Enhancement Approach</h3>
+            <p>Web component that starts with semantic HTML and enhances it with JavaScript. Works even if JS fails to
+              load.</p>
+          </a>
+        </li>
+        <li>
+          <a href="chat-webcomponent-gd/">
+            <h3>Graceful Degradation Approach</h3>
+            <p>All CSS and most HTML encapsulated in shadow DOM, most of remaining functionality is the same as
+              progressive enhancement approach</p>
+          </a>
+        </li>
       </ul>
     </nav>
   </main>
