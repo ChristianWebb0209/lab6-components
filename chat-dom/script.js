@@ -36,7 +36,7 @@ function addMessage(message, user) {
 
 function sendMessage() {
     // get message from input
-    const message = document.getElementById("message-input");
+    const message = document.getElementById("message-input").value;
     // add message from user
     addMessage(message, "user");
     // clear form fields    
